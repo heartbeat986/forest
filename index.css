@@ -1,0 +1,62 @@
+.cycle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.move{
+    animation: water 2s ease-in-out infinite;
+}
+
+.cycle-box{
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    border-radius: 50%;
+    
+}
+
+.cycle-text{
+    color: #666;
+}
+
+.action-btn{
+    margin-top: 200px;
+    height: 30px;
+    width: 60px;
+    margin-left: 30%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+}
+
+
+.collect{
+    animation: collect 1s ease-in-out ;
+    animation-fill-mode: forwards;
+}
+
+.show{
+    animation: show 0.5s ease-in-out;
+}
+
+
+@keyframes water {
+    0% {transform:translateY(0);}
+    50% {transform:translateY(5px);}
+    100% {transform:translateY(0px);}
+}
+
+@keyframes collect {
+    0% {opacity: 1; transform:translate(0,0) scale(1);}
+    100% {opacity: 0; transform:translate(-115px,265px) scale(0);}
+}
+
+@keyframes show {
+    0% {opacity: 0;transform:scale(0);}
+    100% {opacity: 1;transform:scale(1);}
+}
